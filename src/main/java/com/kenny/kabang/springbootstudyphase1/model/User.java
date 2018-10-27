@@ -1,11 +1,19 @@
 package com.kenny.kabang.springbootstudyphase1.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="user", schema="test")
 public class User {
 
+    @Id
+    @Column(name="id")
     private String userId;
 
+    @Column(name="name")
     private String userName;
 
+    @Column(name="age")
     private String userAge;
 
     public String getUserId() {
