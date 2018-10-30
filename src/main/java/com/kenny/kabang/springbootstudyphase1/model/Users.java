@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-public class User {
+public class Users {
 
     @Id
     @Column(name="id")
@@ -45,10 +45,10 @@ public class User {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return Objects.equals(userId, user.userId) &&
-                Objects.equals(userName, user.userName) &&
-                Objects.equals(userAge, user.userAge);
+        Users users = (Users) o;
+        return Objects.equals(userId, users.userId) &&
+                Objects.equals(userName, users.userName) &&
+                Objects.equals(userAge, users.userAge);
     }
 
     @Override
